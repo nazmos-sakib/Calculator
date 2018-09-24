@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="action_settings">Settings</string>
-    <string name="p_calculator">P calculator</string>
+    <string name="Multi_app">Multi App</string>
     <string name="todo">TODO</string>
     <string name="previouspage"><![CDATA[<previousPage]]></string>
 </resources>

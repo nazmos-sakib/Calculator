@@ -2,21 +2,18 @@ package sakib.calculator.com.calculator;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    Button buttonA;
-    Button buttonB;
+    Button buttonPercentCal;
+    Button buttonCalculator;
+    Button buttonWebView;
+    Button buttonMusicPlayer;
     Button buttonNext;
 
     @Override
@@ -28,24 +25,44 @@ public class MainActivity extends AppCompatActivity {
         //setSupportActionBar(toolbar);
 
         textView = findViewById(R.id.textView2);
-        buttonA = findViewById(R.id.button);
-        buttonB = findViewById(R.id.button2);
+        buttonPercentCal = findViewById(R.id.parcentCal);
+        buttonCalculator = findViewById(R.id.calculator);
+        buttonWebView = findViewById(R.id.webView);
+        buttonMusicPlayer = findViewById(R.id.musicPlayer);
         buttonNext = findViewById(R.id.nextPage);
 
-        buttonA.setOnClickListener(new View.OnClickListener()
+        buttonPercentCal.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                increaseScore(v);
+                LoadPercentCalculationActivity();
             }
         });
-        buttonB.setOnClickListener(new View.OnClickListener()
+        buttonCalculator.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                increaseScore(v);
+                LoadStanderCalculationActivity();
+            }
+        });
+
+        buttonWebView.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                LoadWebViewActivity();
+            }
+        });
+
+        buttonMusicPlayer.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                LoadMusicPlayerActivity();
             }
         });
 
@@ -65,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
         //textView.setText("Button A");
         switch (v.getId())
         {
-            case R.id.button:
+            case R.id.parcentCal:
                 textView.setText("Button A");
                 break;
-            case R.id.button2:
+            case R.id.calculator:
                 textView.setText("Button B");
                 break;
             default:
@@ -78,10 +95,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
     public void LoadPercentCalculationActivity()
     {
-        Intent intent;	//Intent is used to move to othrer layout
+        Intent intent;	//Intent is used to move to other layout
         intent = new Intent(MainActivity.this,PercentCalculation.class);
+
+        //intent.putExtra("Phone",phn); //passing some value to other layout
+
+        startActivity(intent);
+    }
+
+
+
+    public void LoadStanderCalculationActivity()
+    {
+        Intent intent;	//Intent is used to move to other layout
+        intent = new Intent(MainActivity.this,StandardCalculator.class);
+
+        //intent.putExtra("Phone",phn); //passing some value to other layout
+
+        startActivity(intent);
+    }
+
+
+    public void LoadWebViewActivity()
+    {
+        Intent intent = new Intent(MainActivity.this,WebViewActivity.class);
+
+        //intent.putExtra("Phone",phn); //passing some value to other layout
+
+        startActivity(intent);
+    }
+
+    public void LoadMusicPlayerActivity()
+    {
+        Intent intent;	//Intent is used to move to other layout
+        intent = new Intent(MainActivity.this,MusicPlayer.class);
 
         //intent.putExtra("Phone",phn); //passing some value to other layout
 

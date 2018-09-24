@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
         android:background="@android:color/black"
-        android:text="@string/p_calculator"
+        android:text="@string/Multi_app"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="40sp" />
 
@@ -27,25 +27,26 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="124dp"
-        android:text="TextView"
+        android:text="Press Any Button"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/parcentCal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/textView2"
-        android:text="Button_a" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/webView"
+        android:layout_marginBottom="209dp"
+        android:text="Prcent Calculation" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/calculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="116dp"
-        android:text="Button_b" />
+        android:layout_alignTop="@+id/parcentCal"
+        android:layout_marginEnd="48dp"
+        android:text="Calculator" />
 
     <Button
         android:id="@+id/nextPage"
@@ -56,5 +57,23 @@
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
         android:text="next page>" />
+
+    <Button
+        android:id="@+id/webView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/musicPlayer"
+        android:layout_marginStart="23dp"
+        android:text="Web View" />
+
+    <Button
+        android:id="@+id/musicPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/calculator"
+        android:layout_marginBottom="130dp"
+        android:text="Music Player" />
 
 </RelativeLayout>

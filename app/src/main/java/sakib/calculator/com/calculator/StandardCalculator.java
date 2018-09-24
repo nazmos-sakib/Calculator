@@ -37,7 +37,7 @@ public class StandardCalculator extends AppCompatActivity {
 
         button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        button2 = findViewById(R.id.calculator);
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button4);
         button5 = findViewById(R.id.button5);
@@ -223,7 +223,7 @@ public class StandardCalculator extends AppCompatActivity {
                 equation = equation + "1";
                 textView.setText(equation);
                 break;
-            case R.id.button2:
+            case R.id.calculator:
                 //textView.setText("2");
                 equation = equation + "2";
                 textView.setText(equation);
